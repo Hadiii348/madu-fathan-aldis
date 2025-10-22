@@ -108,9 +108,66 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
+  justify-content: space-between; /* teks di kanan, gambar di kiri */
+  padding: 0 8%;
+  background: url('madu-bg.jpg') center/cover no-repeat; /* ganti dengan path gambar kamu */
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* efek gelap agar teks terbaca */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffcc33; /* warna kuning madu */
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  background: #ffb400;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background: #ffaa00;
+}
+
+.hero img {
+  position: relative;
+  z-index: 1;
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 .bg {
